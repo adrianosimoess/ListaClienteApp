@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ListaClienteApp"
+             x:Class="ListaClienteApp.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Entry Placeholder="Digite seu nome" x:Name="ncliente"
+               Margin="20,10,20,20"/>
+        <Entry Placeholder="Digite o cep" x:Name="txtcep"
+               Margin="20,10,20,20"
+               Completed="Handle_Completed"/>
+       
+        <Label x:Name = "lbllogradouro"/>
+        <Label x:Name = "lblbairro"/>
+        <Label x:Name = "lbllocalidade"/>
+        <Label x:Name = "lbluf"/>
+       
+        
+        <StackLayout VerticalOptions="StartAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                     Orientation="Horizontal">
+            <Button Text="Adicionar do Campo"
+                    Font="10"
+                    Clicked="Adicionar"/>
+                
+            <Button Text="Checar"
+                    Font="10"
+                    Clicked="Checar"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
